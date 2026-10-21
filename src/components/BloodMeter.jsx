@@ -48,45 +48,33 @@ export default function BloodMeter() {
               <button
                 onClick={pulse}
                 aria-label="تپش قلب"
-                className={`relative group cursor-pointer select-none transition-transform duration-300 hover:scale-105 ${
-                  pumped ? "heartbeat" : ""
-                }`}
+                className={`relative ${pumped ? "heartbeat" : ""}`}
               >
-                <div className="relative w-[130px] sm:w-[145px] aspect-[550/478]">
-                  {/* Empty/starving heart base (dim & desaturated) */}
-                  <img
-                    src="/heart-meter.png"
-                    alt="برگرسنج گایز"
-                    width={145}
-                    height={126}
-                    className="w-full h-full object-contain filter grayscale-[80%] brightness-50 opacity-40 select-none pointer-events-none"
-                    draggable={false}
+                <svg viewBox="0 0 100 100" width="130" height="130" style={{ direction: "ltr" }}>
+                  <defs>
+                    <clipPath id="heartClip">
+                      <path d="M50 88 C20 66 6 48 6 32 C6 18 16 8 30 8 C40 8 47 14 50 22 C53 14 60 8 70 8 C84 8 94 18 94 32 C94 48 80 66 50 88 Z" />
+                    </clipPath>
+                  </defs>
+                  <path
+                    d="M50 88 C20 66 6 48 6 32 C6 18 16 8 30 8 C40 8 47 14 50 22 C53 14 60 8 70 8 C84 8 94 18 94 32 C94 48 80 66 50 88 Z"
+                    fill="none"
+                    stroke="var(--red)"
+                    strokeWidth="5"
                   />
-
-                  {/* Filled vibrant heart (liquid fill level from bottom to top) */}
-                  <div
-                    className="absolute inset-0 overflow-hidden transition-all duration-300 ease-out"
-                    style={{
-                      clipPath: `inset(${100 - level}% 0 0 0)`,
-                    }}
-                  >
-                    <img
-                      src="/heart-meter.png"
-                      alt=""
-                      width={145}
-                      height={126}
-                      className="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(229,25,45,0.45)] select-none pointer-events-none"
-                      draggable={false}
-                    />
-                  </div>
-
-                  {/* Percentage badge */}
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="sticker px-2.5 py-0.5 rounded-lg font-black text-base sm:text-lg shadow-md border border-[var(--bg)] pointer-events-none">
-                      {faNum(level)}٪
-                    </span>
-                  </span>
-                </div>
+                  <rect
+                    x="0"
+                    y={100 - level}
+                    width="100"
+                    height={level}
+                    fill="var(--red)"
+                    clipPath="url(#heartClip)"
+                    style={{ transition: "y 0.2s ease, height 0.2s ease" }}
+                  />
+                </svg>
+                <span className="absolute inset-0 flex items-center justify-center font-black text-2xl text-white mix-blend-difference">
+                  {faNum(level)}٪
+                </span>
               </button>
               <span className="mt-2 text-sm font-bold t-red">{tier.label}</span>
             </div>
