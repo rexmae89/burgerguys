@@ -218,7 +218,7 @@ body {
 .hero-burger-wrap {
   position: relative;
   isolation: isolate;
-  width: min(100%, 360px);
+  width: min(100%, 420px);
   aspect-ratio: 1084 / 1451;
   margin-inline: auto;
   animation: hero-burger-float 6.5s ease-in-out infinite;
@@ -280,8 +280,8 @@ body {
 }
 
 @keyframes hero-burger-float {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
+  0%, 100% { transform: translateY(0) rotate(-1deg) scale(0.98); }
+  50% { transform: translateY(-10px) rotate(1deg) scale(1.03); }
 }
 
 @keyframes hero-burger-pulse {
@@ -311,7 +311,7 @@ body {
   }
 
   .hero-burger-wrap {
-    width: min(72vw, 300px);
+    width: min(82vw, 340px);
     margin-bottom: 0.5rem;
   }
 }
