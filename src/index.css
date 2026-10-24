@@ -238,8 +238,22 @@ body {
 
 /* matrix rain columns */
 @keyframes rain-fall {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(100vh); }
+  from { transform: translateY(-120px); }
+  to { transform: translateY(105vh); }
+}
+
+@keyframes burger-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* burger rain drops */
+.burger-rain-drop {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  animation: rain-fall linear infinite;
+  will-change: transform;
 }
 
 /* drip blood divider */
