@@ -35,50 +35,65 @@ export default function Hero() {
         </span>
       ))}
 
-      <div className="max-w-4xl mx-auto px-4 relative">
-        <div className="text-center">
-          <span className="inline-block sticker font-black px-4 py-1.5 rounded-xl text-sm mb-5">
-            🍔 We Serve Burgers & More
-          </span>
-
-          <h1
-            className={`font-black leading-[1.15] text-4xl sm:text-5xl lg:text-6xl t-ink max-w-3xl mx-auto ${matrix ? "text-glow" : ""}`}
-          >
-            اگه روبراه نیستی
-            <br />
-            شاید <span className="t-red">برگر خونت</span> پایینه
-            <span className="t-red"> 🩸</span>
-          </h1>
-
-          <p className="mt-4 t-soft text-base sm:text-lg max-w-md mx-auto leading-8">
-            برگر گایز اردبیل — حال‌وهوایی که از ماتریکس زده بیرون. از ساعت ۱۲ تا ۲۴ منتظرتونیم!
-          </p>
-
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <a href="#menu" className="btn-primary rounded-2xl px-6 py-3.5 font-extrabold flex items-center gap-2 text-base">
-              <Flame size={20} />
-              سفارش بده!
-            </a>
-            <a href="#blood" className="btn-ghost rounded-2xl px-6 py-3.5 font-extrabold text-base">
-              برگر خونم چقدره؟ 🩸
-            </a>
+      <div className="max-w-6xl mx-auto px-4 relative">
+        <div className="hero-grid">
+          <div className="hero-burger-wrap">
+            <span className="hero-burger-glow" aria-hidden="true" />
+            <img
+              src="/hero-burger.webp"
+              alt="برگر امضادار برگر گایز"
+              className="hero-burger-image"
+              width="1084"
+              height="1451"
+              draggable={false}
+            />
+            <span className="hero-burger-shine" />
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-5 sm:gap-6 text-sm font-bold t-soft">
-            <span className="flex flex-col items-center">
-              <span className="text-xl t-ink font-black">۱۰+</span>
-              <span>برگر امضادار</span>
+          <div className="text-center">
+            <span className="inline-block sticker font-black px-4 py-1.5 rounded-xl text-sm mb-5">
+              🍔 We Serve Burgers & More
             </span>
-            <span className="w-px h-8 bg-[var(--line)]" />
-            <span className="flex flex-col items-center">
-              <span className="text-xl t-ink font-black">۱۲ تا ۲۴</span>
-              <span>هر روز باز</span>
-            </span>
-            <span className="w-px h-8 bg-[var(--line)]" />
-            <span className="flex flex-col items-center">
-              <span className="text-xl t-ink font-black">۱۵۰ گرم</span>
-              <span>بیف دست‌ساز</span>
-            </span>
+
+            <h1
+              className={`font-black leading-[1.15] text-4xl sm:text-5xl lg:text-6xl t-ink max-w-3xl mx-auto ${matrix ? "text-glow" : ""}`}
+            >
+              اگه روبراه نیستی
+              <br />
+              شاید <span className="t-red">برگر خونت</span> پایینه
+              <span className="t-red"> 🩸</span>
+            </h1>
+
+            <p className="mt-4 t-soft text-base sm:text-lg max-w-md mx-auto leading-8">
+              برگر گایز اردبیل — حال‌وهوایی که از ماتریکس زده بیرون. از ساعت ۱۲ تا ۲۴ منتظرتونیم!
+            </p>
+
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+              <a href="#menu" className="btn-primary rounded-2xl px-6 py-3.5 font-extrabold flex items-center gap-2 text-base">
+                <Flame size={20} />
+                سفارش بده!
+              </a>
+              <a href="#blood" className="btn-ghost rounded-2xl px-6 py-3.5 font-extrabold text-base">
+                برگر خونم چقدره؟ 🩸
+              </a>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center gap-5 sm:gap-6 text-sm font-bold t-soft">
+              <span className="flex flex-col items-center">
+                <span className="text-xl t-ink font-black">۱۰+</span>
+                <span>برگر امضادار</span>
+              </span>
+              <span className="w-px h-8 bg-[var(--line)]" />
+              <span className="flex flex-col items-center">
+                <span className="text-xl t-ink font-black">۱۲ تا ۲۴</span>
+                <span>هر روز باز</span>
+              </span>
+              <span className="w-px h-8 bg-[var(--line)]" />
+              <span className="flex flex-col items-center">
+                <span className="text-xl t-ink font-black">۱۵۰ گرم</span>
+                <span>بیف دست‌ساز</span>
+              </span>
+            </div>
           </div>
         </div>
 
