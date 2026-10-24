@@ -148,11 +148,6 @@ body {
 }
 .hl-ink { color: #142850; }
 
-/* matrix-only mascot glow */
-.matrix-mascot svg {
-  filter: drop-shadow(0 0 18px rgba(255, 42, 59, 0.45)) drop-shadow(0 0 46px rgba(255, 42, 59, 0.18));
-}
-
 /* keyboard focus */
 :focus-visible {
   outline: 3px solid var(--red);
